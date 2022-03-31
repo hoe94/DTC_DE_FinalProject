@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+    - name: staging
+      database: dtc-de-course-hoe
+      schema: goodreads_book
+
+      tables:
+        - name: goodreads_books_fantasy_paranormal
+        - name: goodreads_books_young_adult
+        - name: goodreads_books_mystery_thriller_crime
+        - name: goodreads_books_romance
+        - name: goodreads_books_poetry
+        - name: goodreads_books_history_biography
+        - name: goodreads_books_comics_graphic
+        - name: goodreads_books_children
+
+models:
+    - name: stg_books_poetery
+      description: > 
+        This is the test sql script try to read the bq table
