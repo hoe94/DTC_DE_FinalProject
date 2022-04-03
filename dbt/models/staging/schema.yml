@@ -14,7 +14,15 @@ sources:
         - name: goodreads_books_history_biography
         - name: goodreads_books_comics_graphic
         - name: goodreads_books_children
-
+        - name: goodreads_reviews_fantasy_paranormal
+        - name: goodreads_reviews_young_adult
+        - name: goodreads_reviews_mystery_thriller_crime
+        - name: goodreads_reviews_romance
+        - name: goodreads_reviews_poetry
+        - name: goodreads_reviews_history_biography
+        - name: goodreads_reviews_comics_graphic
+        - name: goodreads_reviews_children
+        - name: goodreads_authors
 models:
     - name: stg_books_poetery
       description: > 

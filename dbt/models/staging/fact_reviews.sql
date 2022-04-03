@@ -2,45 +2,45 @@
 
 with children as (
     select *, 'children' as book_type
-    from {{ ref('stg_books_children') }} 
+    from {{ ref('stg_reviews_children') }} 
 ),
 
 comics_graphic as (
     select *, 'comics_graphic' as book_type
-    from {{ ref('stg_books_comics_graphic') }} 
+    from {{ ref('stg_reviews_comics_graphic') }} 
 ),
 
 fantasy_paranormal as (
     select *, 'fantasy_paranormal' as book_type
-    from {{ ref('stg_books_fantasy_paranormal') }} 
+    from {{ ref('stg_reviews_fantasy_paranormal') }} 
 ),
 
 history_biography as (
     select *, 'history_biography' as book_type
-    from {{ ref('stg_books_history_biography') }} 
+    from {{ ref('stg_reviews_history_biography') }} 
 ),
 
 mystery_thriller_crime as (
     select *, 'mystery_thriller_crime' as book_type
-    from {{ ref('stg_books_mystery_thriller_crime') }} 
+    from {{ ref('stg_reviews_mystery_thriller_crime') }} 
 ),
 
 poetry as (
     select *, 'poetry' as book_type
-    from {{ ref('stg_books_poetry') }} 
+    from {{ ref('stg_reviews_poetry') }} 
 ),
 
 romance as (
     select *, 'poetry' as book_type
-    from {{ ref('stg_books_romance') }} 
+    from {{ ref('stg_reviews_romance') }} 
 ),
 
 young_adult as (
     select *, 'poetry' as book_type
-    from {{ ref('stg_books_young_adult') }} 
+    from {{ ref('stg_reviews_young_adult') }} 
 ),
 
-books as (
+reviews as (
     select * from children
     union all
     select * from comics_graphic
@@ -58,4 +58,4 @@ books as (
     select * from young_adult
 )
 
-select * from books
+select * from reviews
