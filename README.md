@@ -43,6 +43,6 @@ For whom are interested, You may find the data source at this [site](https://sit
 We have categorized all the airflow jobs by using TAGS as there are 2 modules for this project. 
 For each module, there are 3 different kind of job to perform the data ingestion
  * goodreads_[module]_download_dag:
-  * download the gz file from data source
-  * extract out the json file from gz file
+   * download the gz file from data source
+   * extract out the json file from gz file
  
