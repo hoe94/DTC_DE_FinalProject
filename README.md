@@ -43,11 +43,12 @@ For whom are interested, You may find the data source at this [site](https://sit
 We have categorized all the airflow jobs by using TAGS as there are 2 modules for this project. 
 For each module, there are 3 different kind of job to perform the data ingestion
  * goodreads_[module]_download_dag:
-   * download the gz file from data source
-   * extract out the json file from gz file
+   * download_task: download the gz file from data source
+   * unzip_gz_file: extract out the json file from gz file
  * goodread_[module]_[books_genre]_conversion:
-   * convert the json file into csv file
-   * upload the csv file into data lake, google cloud storage (GCS)
+   * convert_json_csv_[module]: 
+       convert the json file into csv file
+       upload the csv file into data lake, google cloud storage (GCS)
  * goodreads_[module]_[books_genre]_bigquery
-   * create the table in data warehouse, google big query (GBQ) by the csv file in GCS
+   * gcs_bigquery: create the table in data warehouse, google big query (GBQ) by the csv file in GCS
 <img src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/1.png">
