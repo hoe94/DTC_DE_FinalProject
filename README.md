@@ -49,6 +49,14 @@ For each module, there are 3 different kind of job to perform the data ingestion
    * convert_json_csv_[module]: 
        * convert the json file into csv file
        * upload the csv file into data lake, google cloud storage (GCS)
- * goodreads_[module]_[books_genre]_bigquery
+ * goodreads_[module]_[books_genre]_bigquery:
    * gcs_bigquery: create the table in data warehouse, google big query (GBQ) by the csv file in GCS
-<img src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/1.png">
+
+All the data will ingested into staging env (goodreads_books) as per below screenshot.
+<img width = "437" alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/3.png"> 
+
+Here is the Airflow DAG code for this project [link](https://github.com/hoe94/DTC_DE_FinalProject/tree/main/airflow)
+<img width = "437" alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/1.png">
+
+## Data Transformation Pipeline:
+
