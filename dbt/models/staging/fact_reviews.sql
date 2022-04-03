@@ -58,4 +58,20 @@ reviews as (
     select * from young_adult
 )
 
-select * from reviews
+select *, 
+CONCAT(substring(`date_updated`, -4), (case 
+    when substring(`date_updated`, 5,3) = 'Jan' then '01'
+    when substring(`date_updated`, 5,3) = 'Feb' then '02'
+    when substring(`date_updated`, 5,3) = 'Mar' then '03'
+    when substring(`date_updated`, 5,3) = 'Apr' then '04'
+    when substring(`date_updated`, 5,3) = 'May' then '05'
+    when substring(`date_updated`, 5,3) = 'Jun' then '06'
+    when substring(`date_updated`, 5,3) = 'Jul'then '07'
+    when substring(`date_updated`, 5,3) = 'Aug' then '08'
+    when substring(`date_updated`, 5,3) = 'Sep' then '09'
+    when substring(`date_updated`, 5,3) = 'Oct' then '10'
+    when substring(`date_updated`, 5,3) = 'Nov' then '11'
+    when substring(`date_updated`, 5,3) = 'Dec' then '12'
+    ELSE '0'
+END),substring(`date_updated`, 9,2)) AS data_updated_new
+from reviews
