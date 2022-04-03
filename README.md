@@ -40,8 +40,8 @@ For whom are interested, You may find the data source at this [site](https://sit
 <img src = 'https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/Project_Architecture.png'>
 
 ## Data Ingestion Pipeline
-We have categorized all the airflow jobs by using TAGS as there are 2 modules for this project. 
-For each module, there are 3 different kind of job to perform the data ingestion
+We have categorized all the airflow jobs by using TAGS as there are 2 modules for this project. <br>
+For each module, there are 3 different kind of job to perform the data ingestion. <br>
  * goodreads_[module]_download_dag:
    * download_task: download the gz file from data source
    * unzip_gz_file: extract out the json file from gz file
@@ -52,10 +52,10 @@ For each module, there are 3 different kind of job to perform the data ingestion
  * goodreads_[module]_[books_genre]_bigquery:
    * gcs_bigquery: create the table in data warehouse, google big query (GBQ) by the csv file in GCS
 
-All the data will ingested into staging env (goodreads_books) as per below screenshot.
+All the data will ingested into staging env (goodreads_books) as per below screenshot. <br>
 <img width = "437" alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/3.png"> 
 
-Here is the Airflow DAG code for this project [link](https://github.com/hoe94/DTC_DE_FinalProject/tree/main/airflow)
+Here is the Airflow DAG code for this project [link](https://github.com/hoe94/DTC_DE_FinalProject/tree/main/airflow) <br>
 <img width = "437" alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/1.png">
 
 ## Data Transformation Pipeline:
