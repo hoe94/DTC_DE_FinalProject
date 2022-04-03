@@ -29,7 +29,12 @@ For whom are interested, You may find the data source at this [site](https://sit
 ## Tools & Technology
 * Cloud: Google Cloud Platform (GCP)
   * Data Lake: Google Cloud Storage (GCS)
+  * Data Warehouse: Google Big Query (GBQ)
+  * Data Visualization: Google Data Studio (GDS)
 * Containerization: Docker, Docker Compose
 * Orchestration: Apache Airflow
 * Data Transformation: Data Build Tool (DBT)
-* 
+* Programming Language: Python, SQL
+
+## Project Architecture
+<img src = 'https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/Project_Architecture.png'>
