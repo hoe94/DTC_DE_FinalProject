@@ -53,10 +53,10 @@ For each module, there are 3 different kind of job to perform the data ingestion
    * gcs_bigquery: create the table in data warehouse, google big query (GBQ) by the csv file in GCS
 
 All the data will ingested into staging env (goodreads_books) as per below screenshot. <br>
-<img width = "437" alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/3.png"> 
+<img height = "200" width = "437" alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/3.png"> 
 
 Here is the Airflow DAG code for this project [link](https://github.com/hoe94/DTC_DE_FinalProject/tree/main/airflow) <br>
-<img width = "437" alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/1.png">
+<img alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/1.png">
 
 ## Data Transformation Pipeline:
 
