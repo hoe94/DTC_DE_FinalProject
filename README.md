@@ -11,6 +11,7 @@ This is the end to end project to gain the insight about the books & books ratin
 ## Dataset
 This is the dataset collected from [GoodReads](https://www.goodreads.com/) website. It consists of 8 different books genre for Books module. 
 | Genre     					      |
+|---|
 |Children						        |
 |Comics & Graphic				    |
 |Fantasy & Paranormal			  |
