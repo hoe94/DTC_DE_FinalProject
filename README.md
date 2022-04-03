@@ -47,8 +47,8 @@ For each module, there are 3 different kind of job to perform the data ingestion
    * unzip_gz_file: extract out the json file from gz file
  * goodread_[module]_[books_genre]_conversion:
    * convert_json_csv_[module]: 
-       convert the json file into csv file
-       upload the csv file into data lake, google cloud storage (GCS)
+       * convert the json file into csv file
+       * upload the csv file into data lake, google cloud storage (GCS)
  * goodreads_[module]_[books_genre]_bigquery
    * gcs_bigquery: create the table in data warehouse, google big query (GBQ) by the csv file in GCS
 <img src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/1.png">
