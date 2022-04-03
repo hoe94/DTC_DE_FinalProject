@@ -58,4 +58,13 @@ Here is the Airflow DAG code for this project [link](https://github.com/hoe94/DT
 <img width = "437" alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/3.png"> 
 
 ## Data Transformation Pipeline:
+Due to the limited available time, We only perform 2 types data transformation for this project. <br>
 
+1. Stack all the genres tables into the master table for books & reviews module.
+<img width = "437" alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/4.png"> <br>
+
+2. Extract the date info from the string column in reviews module.
+<img width = "437" alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/5.png"> <br>
+
+All the processed data will ingested into production env (goodreads_stagging）.
+<img width = "437" alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/6.png"> <br>
