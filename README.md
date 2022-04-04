@@ -87,7 +87,13 @@ Required Services: <br>
 Step 1: Initial the Virtual Machine in Google Compute Engine
 * create a linux based VM in GCS. Here is the tutorial video about setup the VM [video](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=12). The video start from beginning till 15 mins is the part about configure the VM in GCS.
 
-Step 1.1: Setup the Anaconda, Docker & Docker Compose in the Virtual Machine
+Step 1.1: Create the bucket in Google Cloud Storage (GCS)
+* create a folder, raw inside the GCS 
+
+Step 1.2: Create the dataset in Google Big Query (GBQ)
+* create a dataset, goodreads_books inside the GBQ
+*
+Step 1.3: Setup the Anaconda, Docker & Docker Compose in the Virtual Machine
 * Install the *Remote SSH* extension in Visual Studio Code. This is useful while access the VM through SSH.
 * Using the config file [here](https://github.com/hoe94/DTC_DE_FinalProject/tree/main/configuration) to access the VM through SSH.
 * Here is the tutorial video about all the configuration [video](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=12)
@@ -103,6 +109,35 @@ Step 2: Setup the Apache Airflow through Docker Compose
 * Run the docker command *docker-compose build* & *docker-compose up* to build the Airflow container through docker compose.
 * Access the Airflow UI through this (url)[localhost:8080] and the credentials are username: airflow, password: airflow
 
-Step 2.1: Step by step how to use the apache airflow services
-* Copy all the dag file from [here](https://github.com/hoe94/DTC_DE_FinalProject/tree/main/airflow/dags) into VM
-* Run the Docker Compose file to start the apache airflow
+Step 2.1: Data Ingestion Pipeline
+* Copy all the dags file from [here](https://github.com/hoe94/DTC_DE_FinalProject/tree/main/airflow/dags) into dags folder in VM
+* Run all the airflow jobs by enable the pipeline in Airflow UI.
+
+Setup 3: DBT Cloud Configuration
+* Please refer this [tutorial](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/week_4_analytics_engineering/dbt_cloud_setup.md) to setup the DBT Cloud. It requires the json file from step 0.
+
+Setup 3.1: Data Transformation Pipeline
+* Copy all the models file from [here](https://github.com/hoe94/DTC_DE_FinalProject/tree/main/dbt/models/staging) into this folder, models in DBT.
+* Run the DBT command *dbt run --select fact_books* & *dbt run --select fact_reviews* to perform the data transformation. The processed data will ingested into Production env, goodreads_stagging
+
+## Further Improvements:
+* Add on Streaming Pipeline (Apache Kafka) in this project
+* Use Terraform to configure the services in Google Cloud
+* Write .parquet file instead of .csv file in the data ingestion pipeline
+* Schedule run the DBT models
+* Write the data quality test in DBT
+* Write the documentation in DBT
+* Create the partitioned & clustered table in GBQ
+* Perform more advanced data transformation by using DBT & Spark
+
+## Special Thanks:
+Kudos for [DataTalks.Club](https://datatalks.club) put so much effort on this courses to contribute the community. Without their contribution, we may learn the knowlegde from scratch & without the right guildance. You may visit here for the [course](https://github.com/DataTalksClub/data-engineering-zoomcamp) <br>
+
+Besides, Thanks for MengTing Wan and her partners to provide the GoodReads Dataset. They are very kind to share their works to the public for the academic purpose.
+I am glad to use the data source to start my final project.<br>
+
+Citation:
+* Mengting Wan, Julian McAuley, ["Item Recommendation on Monotonic Behavior Chains"](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2FMengtingWan%2Fmengtingwan.github.io%2Fraw%2Fmaster%2Fpaper%2Frecsys18_mwan.pdf&sa=D&sntz=1&usg=AOvVaw0HcX6gU1ENhk7fbCXXbCiy)
+in RecSys'18. [bibtext](https://www.google.com/url?q=https%3A%2F%2Fdblp.uni-trier.de%2Frec%2Fbibtex%2Fconf%2Frecsys%2FWanM18&sa=D&sntz=1&usg=AOvVaw2VTBdVH0HOCFqZJ3u3NsgZ)
+* Mengting Wan, Rishabh Misra, Ndapa Nakashole, Julian McAuley, ["Fine-Grained Spoiler Detection from Large-Scale Review Corpora"](https://www.google.com/url?q=https%3A%2F%2Fwww.aclweb.org%2Fanthology%2FP19-1248&sa=D&sntz=1&usg=AOvVaw1G1ZlQ7oe0NDtqeI8gN2Nf), 
+* in ACL'19. [bibtex](https://www.google.com/url?q=https%3A%2F%2Fdblp.uni-trier.de%2Frec%2Fbibtex%2Fconf%2Facl%2FWanMNM19&sa=D&sntz=1&usg=AOvVaw25f7_0XLwNzo6a9-Qa2jGv)
