@@ -79,11 +79,25 @@ There are 2 dashboards for this project, GoodReads Books Dashboard & GoodReads R
 Step 0: Setup the Base Environment <br>
 Required Services: <br>
 * [Google Cloud Platform](https://console.cloud.google.com/) - register an account with credit card GCP will free us $300 (rm1200) for 3 months
-  * create a service account & download the keys as json file in IAM.
-  * Enable the API related to Google Compute Engine, Google Cloud Storage & Google Big Query
-* Data Build Tools (DBT Cloud)
-  * Register an account at this [link](https://www.getdbt.com/signup/). It's free for single user usage.
+  * Create a service account & download the keys as json file in IAM.
+  * Enable the API related to the services (Google Compute Engine, Google Cloud Storage & Google Big Query)
+* [Data Build Tools (DBT Cloud)](https://www.getdbt.com/signup/)
+  * It's free usage for single user. Will start to configure at the below step
 
-Step 1: Initial the Virtual Machine in GCS
-* create a linux based virtual machine in Google Compute Engine. Here is the tutorial video about setup the VM [video](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=12). You can start to watch till 15 mins.
+Step 1: Initial the Virtual Machine in Google Compute Engine
+* create a linux based VM in GCS. Here is the tutorial video about setup the VM [video](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=12). The video start from beginning till 15 mins is the part about configure the VM in GCS.
+
+Step 1.1: Setup the Anaconda, Docker & Docker Compose in the Virtual Machine
+* Install the *Remote SSH* extension in Visual Studio Code. This is useful while access the VM through SSH.
+* Using the config file [here](https://github.com/hoe94/DTC_DE_FinalProject/tree/main/configuration) to access the VM through SSH.
+* Here is the tutorial video about all the configuration [video]((https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=12)
+  * The video start from 15 mins till 27 mins is the part about configuration
+  * Setup the Anaconda, Docker & Docker Compose
+
+Step 2: Setup the Apache Airflow through Docker Compose
+* Setup the Airflow by using the dockerfile & docker-compose.yaml from the [repository](https://github.com/hoe94/DTC_DE_FinalProject/tree/main/configuration)
+* Please refer this [tutorial video](https://www.youtube.com/watch?v=lqDMzReAtrw&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=18) about modify the below files to setup the airflow 
+
+Step 2.1: Copy the DAG file into VM
+* Copy all the dag file from [here](https://github.com/hoe94/DTC_DE_FinalProject/tree/main/airflow/dags) into VM
 
