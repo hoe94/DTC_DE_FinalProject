@@ -73,7 +73,7 @@ All the processed data will ingested into production env (goodreads_stagging）.
 There are 2 dashboards for this project, GoodReads Books Dashboard & GoodReads Reviews Dashboard. <br>
 
 Books Dashboard: [url](https://datastudio.google.com/u/1/reporting/a8e5ec4f-1cfa-4c94-8299-5fd6d4b9aa9e/page/kdepC)
-Reviews Dashbaord: [url}(https://datastudio.google.com/u/1/reporting/a8e5ec4f-1cfa-4c94-8299-5fd6d4b9aa9e/page/p_mh4etteotc)
+Reviews Dashbaord: [url](https://datastudio.google.com/u/1/reporting/a8e5ec4f-1cfa-4c94-8299-5fd6d4b9aa9e/page/p_mh4etteotc)
 
 <img alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/8.png">
 <img alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/9.png">
