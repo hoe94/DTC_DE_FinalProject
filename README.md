@@ -68,3 +68,7 @@ Due to the limited available time, We only perform 2 types data transformation f
 
 All the processed data will ingested into production env (goodreads_stagging）.<br>
 <img width = "437" alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/6.png"> 
+
+## Data Visualization
+<img alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/8.png">
+<img alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/9.png">
