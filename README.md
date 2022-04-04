@@ -70,5 +70,20 @@ All the processed data will ingested into production env (goodreads_stagging）.
 <img width = "437" alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/6.png"> 
 
 ## Data Visualization
+There are 2 dashboards for this project, GoodReads Books Dashboard & GoodReads Reviews Dashboard
 <img alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/8.png">
 <img alt = "image" src = "https://github.com/hoe94/DTC_DE_FinalProject/blob/main/images/9.png">
+
+## Reproductivity
+
+Step 0: Setup the Base Environment <br>
+Required Services: <br>
+* [Google Cloud Platform](https://console.cloud.google.com/) - register an account with credit card GCP will free us $300 (rm1200) for 3 months
+  * create a service account & download the keys as json file in IAM.
+  * Enable the API related to Google Compute Engine, Google Cloud Storage & Google Big Query
+* Data Build Tools (DBT Cloud)
+  * Register an account at this [link](https://www.getdbt.com/signup/). It's free for single user usage.
+
+Step 1: Initial the Virtual Machine in GCS
+* create a linux based virtual machine in Google Compute Engine. Here is the tutorial video about setup the VM [video](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=12). You can start to watch till 15 mins.
+
