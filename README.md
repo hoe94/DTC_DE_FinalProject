@@ -90,14 +90,19 @@ Step 1: Initial the Virtual Machine in Google Compute Engine
 Step 1.1: Setup the Anaconda, Docker & Docker Compose in the Virtual Machine
 * Install the *Remote SSH* extension in Visual Studio Code. This is useful while access the VM through SSH.
 * Using the config file [here](https://github.com/hoe94/DTC_DE_FinalProject/tree/main/configuration) to access the VM through SSH.
-* Here is the tutorial video about all the configuration [video]((https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=12)
+* Here is the tutorial video about all the configuration [video](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=12)
   * The video start from 15 mins till 27 mins is the part about configuration
   * Setup the Anaconda, Docker & Docker Compose
 
 Step 2: Setup the Apache Airflow through Docker Compose
-* Setup the Airflow by using the dockerfile & docker-compose.yaml from the [repository](https://github.com/hoe94/DTC_DE_FinalProject/tree/main/configuration)
-* Please refer this [tutorial video](https://www.youtube.com/watch?v=lqDMzReAtrw&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=18) about modify the below files to setup the airflow 
+* Create empty folder, airflow to contains the configuration file in VM
+* Create empty folder, dags, logs, plugins inside the airflow folder
+* Copy the dockerfile & docker-compose.yaml from the [repository](https://github.com/hoe94/DTC_DE_FinalProject/tree/main/configuration) & paste into airflow folder
+* Change env variables GOOGLE_APPLICATION_CREDENTIALS (path to credentials file on VM), GCP_PROJECT_ID & GCP_GCS_BUCKET in docker-compose.yaml file
+* Please refer this [tutorial video](https://www.youtube.com/watch?v=lqDMzReAtrw&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=18) for further details
+* Run the docker command *docker-compose build* & *docker-compose up* to build the Airflow container through docker compose.
+* Access the Airflow UI through this (url)[localhost:8080] and the credentials are username: airflow, password: airflow
 
-Step 2.1: Copy the DAG file into VM
+Step 2.1: Step by step how to use the apache airflow services
 * Copy all the dag file from [here](https://github.com/hoe94/DTC_DE_FinalProject/tree/main/airflow/dags) into VM
-
+* Run the Docker Compose file to start the apache airflow
